@@ -27,17 +27,17 @@ classifiers = [
 # On Linux the CUDA engines take torch and triton from NVIDIA's PyTorch container (see RUNBOOK.md), so pip leaves
 # them alone; their kernels' .cu sources build on first use with the container's nvcc.
 dependencies = [
-  "mlx>=0.31.2; sys_platform == 'darwin'",
-  "mlx-lm>=0.31.3,<0.32; sys_platform == 'darwin'",
-  "numpy>=1.26",
-  "huggingface-hub>=0.24",
-  "tokenizers>=0.20; sys_platform != 'darwin'",
-  "safetensors>=0.4; sys_platform != 'darwin'",
-  "jinja2>=3.1; sys_platform != 'darwin'",
+  "mlx==0.32.4; sys_platform == 'darwin'",
+  "mlx-lm==0.31.3; sys_platform == 'darwin'",
+  "numpy==2.5.4",
+  "huggingface-hub==2.4.0",
+  "tokenizers==0.23.3; sys_platform != 'darwin'",
+  "safetensors==0.8.0; sys_platform != 'darwin'",
+  "jinja2==3.1.6; sys_platform != 'darwin'",
 ]
 
 [project.optional-dependencies]
-test = ["pytest>=8"]
+test = ["pytest==9.2.0"]
 
 [project.scripts]
 tensorfold = "tensorfold.cli:main"
